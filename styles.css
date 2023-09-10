@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",cursive;
+}
+main{
+    background: linear-gradient(to right,#C4DFDF,#D2E9E9,#E3F4F4);
+    height: 100vh;
+    width: 100vw;
+}
+.stopWatch{
+    background: url(https://images.unsplash.com/37/tEREUy1vSfuSu8LzTop3_IMG_2538.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+   width: 90%;
+   max-width: 600px;
+   min-height: 400px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   padding: 30px;
+   border-radius: 12px;
+   box-shadow: 7px 7px 20px #57375D;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.overlay {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.4); /* Adjust the alpha (last) value for opacity */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+  #forH1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+  }
+h1{
+    width: 40%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 29px;
+    z-index: 1;
+    color: #0C134F;
+    border-radius: 10px;
+    border:2px solid black;
+   box-shadow: 10px 9px 20px #57375D;
+   font-family: "Roboto",sans-serif;
+   padding:10px 20px;
+
+
+
+
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-top:40px;
+    z-index: 2;
+    width: 40%;
+    position: relative;
+    left: 3%;
+}
+.buttons div{
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 20px;
+    color: #0C134F;
+    box-shadow: 2px 2px 7px #0C134F;
+    cursor: pointer;
+    position: relative;
+}
+.buttons div:hover{
+    animation: shake 0.3s infinite;
+}
+@keyframes shake {
+    0%{
+       left: 0px;
+    }
+    25%{
+        left: 2px;
+    }
+    50%{
+        left: -2px;
+    }
+    75%{
+        left: 2px;
+    }
+    100%{
+        left: 0px;
+    }
+    
+}
+.buttons div:nth-child(2){
+    transform: scale(1.5);
+    background-color: #0C134F;
+    color: white;
+    padding:9px;
+}
+footer{
+    position: fixed;
+    bottom: 0px;width: 100%;
+    text-align: center;
+   padding: 10px;
+   color: #0C134F;
+}
+@media screen and (max-width: 450px){
+    .buttons{
+        width: 65%;
+    }
+    h1{
+        width: 65%;
+        font-size: 25px;
+    }
+    .buttons div:hover{
+        animation:none ;
+        color: rgb(82, 87, 82);
+    }
+}
+@media screen and (max-width:285px) {
+
+     .buttons{
+        width: 100%;
+    }
+    h1{
+        width: 100%;
+        font-size: 30px;
+      
+    }
+}@media screen and (max-width: 550px) and (min-width: 450px) {
+    .buttons{
+        width: 55%;
+    }
+    h1{
+        width: 55%;
+      
+    }
+}
+@media screen and (max-width:800px ) {
+
+ 
+   .buttons div:hover{
+    animation:none ;
+    color: rgb(82, 87, 82);
+}
+}
